@@ -32,16 +32,16 @@ const install = (Vue, config = {}) => {
     Vue.use(Component)
   })
 
-  Vue.use(InfiniteScroll)
+  // Vue.use(InfiniteScroll)
   Vue.use(Lazyload, {
     loading: require('./assets/loading-spin.svg'),
     attempt: 3,
     ...config.lazyload
   })
 
-  Vue.$dialog = Vue.prototype.$dialog = Dialog
-  Vue.$toast = Vue.prototype.$toast = Toast
-  Vue.$toptips = Vue.prototype.$toptips = TopTips
+ // Vue.$dialog = Vue.prototype.$dialog = Dialog
+ // Vue.$toast = Vue.prototype.$toast = Toast
+ // Vue.$toptips = Vue.prototype.$toptips = TopTips
 }
 
 /* istanbul ignore if */
