@@ -1,17 +1,19 @@
 // This file is auto gererated by build/bin/build-entry.js
-import 'weui/dist/style/weui.min.css'
+import './style/icui.min.css'
 import Actionsheet from './components/actionsheet'
 import Button from './components/button'
 import Cell from './components/cell'
 import Group from './components/group'
 import Lazyload from './components/lazyload'
+import Scroller from './components/scroller'
 
 const version = '1.0.0'
 const components = [
   Actionsheet,
   Button,
   Cell,
-  Group
+  Group,
+  Scroller
 ]
 
 const install = (Vue, config = {}) => {
@@ -43,7 +45,8 @@ export {
   Button,
   Cell,
   Group,
-  Lazyload
+  Lazyload,
+  Scroller
 }
 
 export default {
