@@ -12,22 +12,21 @@ const components = [
   Actionsheet,
   Button,
   Cell,
-  Group,
-  Scroller
+  Group
 ]
 
 const install = (Vue, config = {}) => {
   components.forEach(Component => {
     Vue.use(Component)
   })
-
   // Vue.use(InfiniteScroll)
   Vue.use(Lazyload, {
     loading: require('./assets/loading-spin.svg'),
     attempt: 3,
     ...config.lazyload
   })
-
+  Vue._IScroll = config.IScroll || config
+  Vue.component('icui-scroller', Scroller)
  // Vue.$dialog = Vue.prototype.$dialog = Dialog
  // Vue.$toast = Vue.prototype.$toast = Toast
  // Vue.$toptips = Vue.prototype.$toptips = TopTips
