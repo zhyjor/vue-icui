@@ -1,4 +1,5 @@
 // This file is auto gererated by build/bin/build-entry.js
+import 'weui/dist/style/weui.min.css'
 import './style/icui.min.css'
 import Actionsheet from './components/actionsheet'
 import Button from './components/button'
@@ -12,7 +13,8 @@ const components = [
   Actionsheet,
   Button,
   Cell,
-  Group
+  Group,
+  Scroller
 ]
 
 const install = (Vue, config = {}) => {
@@ -25,8 +27,7 @@ const install = (Vue, config = {}) => {
     attempt: 3,
     ...config.lazyload
   })
-  Vue._IScroll = config.IScroll || config
-  Vue.component('icui-scroller', Scroller)
+ // Vue._IScroll = config.IScroll || config
  // Vue.$dialog = Vue.prototype.$dialog = Dialog
  // Vue.$toast = Vue.prototype.$toast = Toast
  // Vue.$toptips = Vue.prototype.$toptips = TopTips

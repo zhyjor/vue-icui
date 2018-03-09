@@ -7,12 +7,12 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import {create} from '../../utils'
+
   import Vue from 'vue'
   import scroller from 'iscroll'
 
-  export default create({
-    name: 'icui-scroller',
+  export default {
+    name: 'lscroller',
 
     props: {
       options: {
@@ -124,7 +124,7 @@
         this._registPullEvents()
       })
     }
-  })
+  }
 </script>
 
 <style scoped lang="scss">

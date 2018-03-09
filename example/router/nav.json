@@ -3,6 +3,18 @@
     "groupTitle": "基础组件",
     "navItems": [
       {
+        "path": "/pulldown",
+        "name": "Pulldowm",
+        "description": "下拉",
+        "icon": "badge_new"
+      },
+      {
+        "path": "/pullup",
+        "name": "Pullup",
+        "description": "下拉",
+        "icon": "badge_new"
+      },
+      {
         "path": "/badge",
         "name": "Badge",
         "description": "小徽章",

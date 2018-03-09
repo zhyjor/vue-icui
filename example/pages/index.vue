@@ -12,7 +12,6 @@
       </v-icui-cell>
     </v-icui-group>
 
-    <v-icui-footer class="footer-copyright" text="Copyright © 2017 粤ICP备17009332号-1"/>
   </div>
 </template>
 

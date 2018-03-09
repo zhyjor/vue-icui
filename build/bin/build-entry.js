@@ -11,8 +11,7 @@ function buildWevueEntry () {
     'InfiniteScroll',
     'Dialog',
     'Toast',
-    'TopTips',
-    'Scroller'
+    'TopTips'
   ]
 
   const importList = Components.map(name => `import ${uppercamelcase(name)} from './components/${name}'`)
@@ -20,6 +19,7 @@ function buildWevueEntry () {
   const intallList = exportList.filter(name => !~uninstallComponents.indexOf(uppercamelcase(name)))
 
   const content = `${tips}
+import 'weui/dist/style/weui.min.css'
 import './style/icui.min.css'
 ${importList.join('\n')}
 
@@ -38,8 +38,7 @@ const install = (Vue, config = {}) => {
     attempt: 3,
     ...config.lazyload
   })
-  Vue._IScroll = config.IScroll || config
-  Vue.component('icui-scroller', Scroller)
+ // Vue._IScroll = config.IScroll || config
  // Vue.$dialog = Vue.prototype.$dialog = Dialog
  // Vue.$toast = Vue.prototype.$toast = Toast
  // Vue.$toptips = Vue.prototype.$toptips = TopTips
