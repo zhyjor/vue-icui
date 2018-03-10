@@ -86,8 +86,7 @@
       this.iscroll && this.iscroll.destroy()
       this.iscroll = null
     },
-    mount () {
-      alert('scroller')
+    mounted () {
       const events = [
         'beforeScrollStart',
         'scrollCancel',
@@ -106,7 +105,7 @@
         this.$refs.scrollView.scrollTop = 0
         for (key in attributes) {
           value = attributes[key]
-          if (value instanceof global.Attr && value.indexOf('data-v-') > -1) {
+          if (value instanceof global.Attr && value.toString().indexOf('data-v-') > -1) {
             this.$refs.scroller.attributes.setNamedItem(document.createAttribute(value.name))
           }
         }

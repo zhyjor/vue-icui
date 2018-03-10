@@ -1,5 +1,5 @@
 <template>
-  <lscroller
+  <icui-scroller
     ref="scrollView"
     class="scroll-view msg-items"
     :options="{click:true, scrollY: true, mouseWheel: true, probeType: 1}"
@@ -14,12 +14,13 @@
         item.name
       </div>
     </div>
-  </lscroller>
+    <div class="data-load-tips">
+      {{ loadStatusConfig[loadStatus] }}
+    </div>
+  </icui-scroller>
 </template>
 
 <script>
-  import lscroller from './scer'
-
   export default {
     updated () {
       this.refresh()
@@ -33,11 +34,6 @@
       msgs.push({id: 24, name: 'bbb'})
       msgs.push({id: 25, name: 'bbb'})
       msgs.push({id: 26, name: 'bbb'})
-      msgs.push({id: 27, name: 'bbb'})
-      msgs.push({id: 28, name: 'bbb'})
-      msgs.push({id: 29, name: 'bbb'})
-      msgs.push({id: 12, name: 'bbb'})
-      msgs.push({id: 4, name: 'ddd'})
       let totalCount = 40
       let loadStatus = ''
       if (msgs.length < totalCount) {
@@ -96,9 +92,6 @@
         item.collected = collect
         this.$forceUpdate()
       }
-    },
-    components: {
-      lscroller
     }
   }
 </script>
@@ -108,8 +101,8 @@
   .msg-items {
     position: absolute;
     z-index: 1;
-    top: 85px;
-    bottom: 0;
+    top: 0;
+    bottom: 200px;
     overflow: hidden;
     background-color: #F7F7F7;
     width: 100%;

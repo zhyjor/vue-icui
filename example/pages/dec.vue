@@ -7,12 +7,10 @@
 </template>
 
 <script type="text/ecmascript-6">
-
-  import Vue from 'vue'
   import scroller from 'iscroll'
 
   export default {
-    name: 'lscroller',
+    name: 'icui-scroller',
 
     props: {
       options: {
@@ -86,8 +84,7 @@
       this.iscroll && this.iscroll.destroy()
       this.iscroll = null
     },
-    mount () {
-      alert('scroller')
+    mounted () {
       const events = [
         'beforeScrollStart',
         'scrollCancel',
@@ -106,7 +103,7 @@
         this.$refs.scrollView.scrollTop = 0
         for (key in attributes) {
           value = attributes[key]
-          if (value instanceof global.Attr && value.indexOf('data-v-') > -1) {
+          if (value instanceof global.Attr && value.toString().indexOf('data-v-') > -1) {
             this.$refs.scroller.attributes.setNamedItem(document.createAttribute(value.name))
           }
         }

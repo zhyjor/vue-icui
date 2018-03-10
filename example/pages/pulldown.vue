@@ -1,9 +1,11 @@
 <template>
-  <icui-scroller
+  <decview
     ref="scrollView"
     class="scroll-view msg-items"
-    :options="{click:true, scrollY: true, mouseWheel: true, probeType: 1}"
+    :options="{click:true, scrollY: true, mouseWheel: true, probeType: 3}"
     :scroller-class="{'scroller': true}"
+    :wrapper-style="wrapperStyle"
+    :scroller-style="scrollerStyle"
     @scroll="scrolling"
     @scrollEnd="scrollEnd">
     <div
@@ -14,10 +16,13 @@
         item.name
       </div>
     </div>
-  </icui-scroller>
+    <div class="data-load-tips">{{ loadStatusConfig[loadStatus] }}</div>
+  </decview>
 </template>
 
 <script>
+  import decview from './dec'
+
   export default {
     updated () {
       this.refresh()
@@ -45,6 +50,8 @@
       }
       console.log(msgs)
       return {
+        wrapperStyle: {height: '500px'},
+        scrollerStyle: {'min-height': '391px'},
         msgs: msgs,
         totalCount: totalCount,
         loadStatus: loadStatus,
@@ -53,6 +60,16 @@
           canNotLoad: '没有更多数据~',
           willLoad: '松手开始加载',
           loading: '加载中...'
+        }
+      }
+    },
+    watch: {
+      msgs: function (newVal, oldVal) {
+        let self = this
+        if (self.msgs.length < self.totalCount) {
+          self.loadStatus = 'canLoad'
+        } else {
+          self.loadStatus = 'canNotLoad'
         }
       }
     },
@@ -94,6 +111,9 @@
         item.collected = collect
         this.$forceUpdate()
       }
+    },
+    components: {
+      decview
     }
   }
 </script>
@@ -103,7 +123,7 @@
   .msg-items {
     position: absolute;
     z-index: 1;
-    top: 85px;
+    top: 0;
     bottom: 0;
     overflow: hidden;
     background-color: #F7F7F7;
