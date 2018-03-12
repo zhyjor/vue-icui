@@ -2,7 +2,7 @@
   <decview
     ref="scrollView"
     class="scroll-view msg-items"
-    :options="{click:true, scrollY: true, mouseWheel: true, probeType: 3}"
+    :options="{click:true, scrollY: true, mouseWheel: true, probeType: 1}"
     :scroller-class="{'scroller': true}"
     :wrapper-style="wrapperStyle"
     :scroller-style="scrollerStyle"
@@ -82,7 +82,7 @@
         let self = this
         let iscroll = self.$refs.scrollView.iscroll
         if (self.msgs.length < self.totalCount) {
-          if (Math.abs(iscroll.y) - Math.abs(iscroll.maxScrollY) > 10) {
+          if (Math.abs(iscroll.y) - Math.abs(iscroll.maxScrollY) > 100) {
             self.loadStatus = 'willLoad'
           } else {
             self.loadStatus = 'canLoad'
