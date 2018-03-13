@@ -9,8 +9,8 @@
         "icon": "badge_new"
       },
       {
-        "path": "/pullup",
-        "name": "Pullup",
+        "path": "/vertical-scroll",
+        "name": "vertical-scroll",
         "description": "下拉",
         "icon": "badge_new"
       },

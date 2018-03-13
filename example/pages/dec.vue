@@ -8,6 +8,7 @@
 
 <script type="text/ecmascript-6">
   import scroller from 'iscroll/build/iscroll-probe.js'
+  //  import scroller from 'iscroll'
 
   export default {
     name: 'icui-scroller',

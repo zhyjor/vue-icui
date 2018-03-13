@@ -1,5 +1,5 @@
 <template>
-  <decview
+  <icui-scroller
     ref="scrollView"
     class="scroll-view msg-items"
     :options="{click:true, scrollY: true, mouseWheel: true, probeType: 1}"
@@ -8,6 +8,7 @@
     :scroller-style="scrollerStyle"
     @scroll="scrolling"
     @scrollEnd="scrollEnd">
+    <div v-show="showFreshtips" class="data-load-tips">{{ freshStatusConfig[freshStatus] }}</div>
     <div
       v-for="item in msgs"
       :key="item.id">
@@ -17,12 +18,10 @@
       </div>
     </div>
     <div class="data-load-tips">{{ loadStatusConfig[loadStatus] }}</div>
-  </decview>
+  </icui-scroller>
 </template>
 
 <script>
-  import decview from './dec'
-
   export default {
     updated () {
       this.refresh()
@@ -43,6 +42,7 @@
       msgs.push({id: 4, name: 'ddd'})
       let totalCount = 40
       let loadStatus = ''
+      let freshStatus = ''
       if (msgs.length < totalCount) {
         loadStatus = 'canLoad'
       } else {
@@ -54,12 +54,20 @@
         scrollerStyle: {'min-height': '391px'},
         msgs: msgs,
         totalCount: totalCount,
+        showFreshtips: false,
         loadStatus: loadStatus,
+        freshStatus: freshStatus,
         loadStatusConfig: {
           canLoad: '上拉加载更多',
           canNotLoad: '没有更多数据~',
           willLoad: '松手开始加载',
           loading: '加载中...'
+        },
+        freshStatusConfig: {
+          canFresh: '下拉刷新',
+          willFresh: '松手开始刷新',
+          freshing: '加载中',
+          freshed: ''
         }
       }
     },
@@ -71,6 +79,14 @@
         } else {
           self.loadStatus = 'canNotLoad'
         }
+      },
+      freshStatus: function (newVal, oldVal) {
+        let self = this
+        if (self.freshStatus === 'freshed') {
+          self.showFreshtips = false
+        } else {
+          self.showFreshtips = true
+        }
       }
     },
     methods: {
@@ -81,39 +97,27 @@
       scrolling () {
         let self = this
         let iscroll = self.$refs.scrollView.iscroll
-        if (self.msgs.length < self.totalCount) {
-          if (Math.abs(iscroll.y) - Math.abs(iscroll.maxScrollY) > 100) {
-            self.loadStatus = 'willLoad'
-          } else {
-            self.loadStatus = 'canLoad'
-          }
-        } else {
-          self.loadStatus = 'canNotLoad'
+        if (iscroll.y < 0 && (iscroll.y < iscroll.maxScrollY - 25)) {
+          self.loadStatus = 'willLoad'
+        } else if (iscroll.y > 30) {
+          self.freshStatus = 'willFresh'
         }
       },
       scrollEnd () {
         let self = this
-        if (self.msgs.length < self.totalCount) {
-          if (self.loadStatus === 'willLoad') {
-            self.loadStatus = 'loading'
-            self.getNextPageData()
-          } else {
-            self.loadStatus = 'canLoad'
-          }
+        if (self.loadStatus === 'willLoad') {
+          self.loadStatus = 'loading'
+//            self.getNextPageData()
         } else {
-          self.loadStatus = 'canNotLoad'
+          self.loadStatus = 'canLoad'
         }
-      },
-      setCollect (item) {
-        let ids = []
-        let collect = !item.collected
-        ids.push(item.id)
-        item.collected = collect
-        this.$forceUpdate()
+        if (self.freshStatus === 'willFresh') {
+          self.freshStatus = 'freshing'
+          setTimeout(() => {
+            self.freshStatus = 'freshed'
+          }, 3000)
+        }
       }
-    },
-    components: {
-      decview
     }
   }
 </script>

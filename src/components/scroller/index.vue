@@ -8,12 +8,10 @@
 
 <script type="text/ecmascript-6">
   import {create} from '../../utils'
-  import Vue from 'vue'
-  import scroller from 'iscroll'
+  import scroller from 'iscroll/build/iscroll-probe.js'
 
   export default create({
     name: 'icui-scroller',
-
     props: {
       options: {
         type: Object,
@@ -117,7 +115,7 @@
       this.$nextTick(() => {
         const IScroll = scroller
         this.iscroll = new IScroll(this.$refs.scrollView, this.options)
-        events.forEach(events => {
+        events.forEach(event => {
           this.iscroll.on(event, () => this.$emit(event, this.iscroll))
         })
         this._registPullEvents()
