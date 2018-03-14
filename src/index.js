@@ -2,18 +2,26 @@
 import 'weui/dist/style/weui.min.css'
 import './style/icui.min.css'
 import Actionsheet from './components/actionsheet'
+import Bubble from './components/bubble'
 import Button from './components/button'
 import Cell from './components/cell'
+import Dialog from './components/dialog'
 import Group from './components/group'
 import Lazyload from './components/lazyload'
+import Loading from './components/loading'
+import Scroll from './components/scroll'
 import Scroller from './components/scroller'
 
 const version = '1.0.0'
 const components = [
   Actionsheet,
+  Bubble,
   Button,
   Cell,
+  Dialog,
   Group,
+  Loading,
+  Scroll,
   Scroller
 ]
 
@@ -28,7 +36,7 @@ const install = (Vue, config = {}) => {
     ...config.lazyload
   })
  // Vue._IScroll = config.IScroll || config
- // Vue.$dialog = Vue.prototype.$dialog = Dialog
+ Vue.$dialog = Vue.prototype.$dialog = Dialog
  // Vue.$toast = Vue.prototype.$toast = Toast
  // Vue.$toptips = Vue.prototype.$toptips = TopTips
 }
@@ -42,10 +50,14 @@ export {
   install,
   version,
   Actionsheet,
+  Bubble,
   Button,
   Cell,
+  Dialog,
   Group,
   Lazyload,
+  Loading,
+  Scroll,
   Scroller
 }
 

@@ -48,16 +48,16 @@
 
 <script type="text/ecmascript-6">
   import BScroll from 'better-scroll'
-  import Loading from './loading.vue'
-  import Bubble from './bubble.vue'
-  import {getRect} from '../assets/js/dom'
+  import Loading from '../loading'
+  import Bubble from '../bubble'
+  import {getRect} from '../../assets/js/dom'
+  import {create} from '../../utils'
 
-  const COMPONENT_NAME = 'scroll'
   const DIRECTION_H = 'horizontal'
   const DIRECTION_V = 'vertical'
 
-  export default {
-    name: COMPONENT_NAME,
+  export default create({
+    name: 'v-icui-scroll',
     props: {
       data: {
         type: Array,
@@ -282,7 +282,7 @@
       Loading,
       Bubble
     }
-  }
+  })
 
 </script>
 <style lang="scss" rel="stylesheet/scss">

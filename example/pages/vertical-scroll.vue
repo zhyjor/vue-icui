@@ -1,5 +1,5 @@
 <template>
-  <optional-demo class="scroll-view" :title="$t('examples.normalScrollList')" :desc="$t('normalScrollListPage.desc')">
+  <optional-demo class="scroll-view">
     <div class="scroll-list-wrap" slot="demo">
       <scroll
         ref="scroll"
@@ -10,15 +10,15 @@
         :start-y="parseInt(startY)"
         @pullingDown="onPullingDown"
         @pullingUp="onPullingUp"
-        @click="clickItem"/>
+        @click="clickItem" />
     </div>
   </optional-demo>
 </template>
 
 <script type="text/ecmascript-6">
   import Vue from 'vue'
-  import Scroll from './scroll.vue'
-
+  import OptionalDemo from './scroll-demo.vue'
+  import scroll from './scroll.vue'
   import {ease} from '../assets/js/ease'
 
   export default {
@@ -49,7 +49,8 @@
       }
     },
     components: {
-      Scroll
+      OptionalDemo,
+      scroll
     },
     watch: {
       scrollbarObj: {

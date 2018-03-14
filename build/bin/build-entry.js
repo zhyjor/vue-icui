@@ -9,7 +9,6 @@ function buildWevueEntry () {
   const uninstallComponents = [
     'Lazyload',
     'InfiniteScroll',
-    'Dialog',
     'Toast',
     'TopTips'
   ]
@@ -39,7 +38,7 @@ const install = (Vue, config = {}) => {
     ...config.lazyload
   })
  // Vue._IScroll = config.IScroll || config
- // Vue.$dialog = Vue.prototype.$dialog = Dialog
+ Vue.$dialog = Vue.prototype.$dialog = Dialog
  // Vue.$toast = Vue.prototype.$toast = Toast
  // Vue.$toptips = Vue.prototype.$toptips = TopTips
 }
