@@ -3,8 +3,11 @@ import './style/icui.min.css'
 import Actionsheet from './components/actionsheet'
 import Button from './components/button'
 import Cell from './components/cell'
+import Checkbox from './components/checkbox'
 import Group from './components/group'
+import Icon from './components/icon'
 import Lazyload from './components/lazyload'
+import Radio from './components/radio'
 import Scroller from './components/scroller'
 
 const version = '1.0.0'
@@ -12,7 +15,10 @@ const components = [
   Actionsheet,
   Button,
   Cell,
+  Checkbox,
   Group,
+  Icon,
+  Radio,
   Scroller
 ]
 
@@ -44,8 +50,11 @@ export {
   Actionsheet,
   Button,
   Cell,
+  Checkbox,
   Group,
+  Icon,
   Lazyload,
+  Radio,
   Scroller
 }
 

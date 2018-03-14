@@ -238,5 +238,28 @@
         "icon": "popup"
       }
     ]
+  },
+  {
+    "groupTitle": "测试布局",
+    "navItems": [
+      {
+        "path": "/icon",
+        "name": "icon",
+        "description": "小红点图标",
+        "icon": "icon"
+      },
+      {
+        "path": "/checkbox",
+        "name": "checkbox",
+        "description": "checkbox列表",
+        "icon": "checkbox"
+      },
+      {
+        "path": "/radio",
+        "name": "radio",
+        "description": "radio 列表",
+        "icon": "radio"
+      }
+    ]
   }
 ]
