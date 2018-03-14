@@ -5,10 +5,13 @@ import Actionsheet from './components/actionsheet'
 import Bubble from './components/bubble'
 import Button from './components/button'
 import Cell from './components/cell'
+import Checkbox from './components/checkbox'
 import Dialog from './components/dialog'
 import Group from './components/group'
+import Icon from './components/icon'
 import Lazyload from './components/lazyload'
 import Loading from './components/loading'
+import Radio from './components/radio'
 import Scroll from './components/scroll'
 import Scroller from './components/scroller'
 
@@ -18,9 +21,12 @@ const components = [
   Bubble,
   Button,
   Cell,
+  Checkbox,
   Dialog,
   Group,
+  Icon,
   Loading,
+  Radio,
   Scroll,
   Scroller
 ]
@@ -53,10 +59,13 @@ export {
   Bubble,
   Button,
   Cell,
+  Checkbox,
   Dialog,
   Group,
+  Icon,
   Lazyload,
   Loading,
+  Radio,
   Scroll,
   Scroller
 }
