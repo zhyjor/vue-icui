@@ -6,9 +6,9 @@
 <script type="text/ecmascript-6">
   import {create} from '../../utils'
 
-  export default {
+  export default create({
     name: 'v-icui-loading'
-  }
+  })
 </script>
 <style lang="scss">
   .mf-loading-container {

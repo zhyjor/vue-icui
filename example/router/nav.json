@@ -1,19 +1,36 @@
 [
   {
-    "groupTitle": "基础组件",
+    "groupTitle": "新组件-zh",
     "navItems": [
       {
-        "path": "/pulldown",
-        "name": "Pulldowm",
+        "path": "/pull",
+        "name": "Pull",
         "description": "下拉",
         "icon": "badge_new"
       },
       {
-        "path": "/vertical-scroll",
-        "name": "vertical-scroll",
+        "path": "/loading",
+        "name": "loading",
         "description": "下拉",
         "icon": "badge_new"
       },
+      {
+        "path": "/bubble",
+        "name": "bubble",
+        "description": "水滴",
+        "icon": "badge_new"
+      },
+      {
+        "path": "/dialog",
+        "name": "dialog",
+        "description": "弹窗",
+        "icon": "badge_new"
+      }
+    ]
+  },
+  {
+    "groupTitle": "基础组件",
+    "navItems": [
       {
         "path": "/badge",
         "name": "Badge",

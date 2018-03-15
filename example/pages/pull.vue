@@ -1,29 +1,34 @@
 <template>
-  <optional-demo class="scroll-view">
-    <div class="scroll-list-wrap" slot="demo">
-      <scroll
-        ref="scroll"
-        :data="items"
-        :scrollbar="scrollbarObj"
-        :pull-down-refresh="pullDownRefreshObj"
-        :pull-up-load="pullUpLoadObj"
-        :start-y="parseInt(startY)"
-        @pullingDown="onPullingDown"
-        @pullingUp="onPullingUp"
-        @click="clickItem" />
-    </div>
-  </optional-demo>
+  <!--<optional-demo class="scroll-view">-->
+  <div class="scroll-list-wrap">
+    <v-icui-scroll
+      ref="scroll"
+      :data="items"
+      :scrollbar="scrollbarObj"
+      :pull-down-refresh="pullDownRefreshObj"
+      :pull-up-load="pullUpLoadObj"
+      :start-y="parseInt(startY)"
+      @pullingDown="onPullingDown"
+      @pullingUp="onPullingUp"
+      @click="clickItem">
+      <ul class="list-content">
+        <li :key="item.id" @click="clickItem($event,item)" class="list-item" v-for="item in data1">{{ item.value }}</li>
+      </ul>
+    </v-icui-scroll>
+  </div>
+  <!--</optional-demo>-->
 </template>
 
 <script type="text/ecmascript-6">
   import Vue from 'vue'
-  import OptionalDemo from './scroll-demo.vue'
-  import scroll from './scroll.vue'
-  import {ease} from '../assets/js/ease'
+  //  import OptionalDemo from './scroll-demo.vue'
+  //  import scroll from './scroll.vue'
+    import {ease} from '../assets/js/ease'
 
   export default {
     data () {
       return {
+        data1: [{key: 1, value: 'woshidige'}, {key: 2, value: 'woshidige'}, {key: 3, value: 'woshidige'}],
         scrollbar: true,
         scrollbarFade: true,
         pullDownRefresh: true,
@@ -47,10 +52,6 @@
       for (let i = 0; i < 2; i++) {
         this.items.push(this.$i18n.t('normalScrollListPage.previousTxt') + ++this.itemIndex + this.$i18n.t('normalScrollListPage.followingTxt'))
       }
-    },
-    components: {
-      OptionalDemo,
-      scroll
     },
     watch: {
       scrollbarObj: {
@@ -189,4 +190,25 @@
 </script>
 
 <style scoped lang="scss">
+  .scroll-list-wrap {
+    position: relative;
+    height: 90vh;
+    border: 1px solid rgba(0, 0, 0, .1);
+    /*<!--border-radius: $radius-size-medium;-->*/
+    transform: rotate(0deg); // fix 子元素超出边框圆角部分不隐藏的问题
+    overflow: hidden;
+  }
+
+  .list-content {
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    .list-item {
+      height: 60px;
+      line-height: 60px;
+      font-size: 18px;
+      padding-left: 20px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
 </style>

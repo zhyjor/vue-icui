@@ -1,21 +1,10 @@
 <template>
-  <div class="mf-loading-container">
-    <img src="../assets/images/loading.gif">
-  </div>
+  <v-icui-loading/>
 </template>
 <script type="text/ecmascript-6">
-  const COMPONENT_NAME = 'loading'
-
   export default {
-    name: COMPONENT_NAME
+//    name: 'loading'
   }
 </script>
 <style lang="scss">
-  .mf-loading-container {
-    img {
-      width: 20px;
-      height: 20px;
-      display: block;
-    }
-  }
 </style>

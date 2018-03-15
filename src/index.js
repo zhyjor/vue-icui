@@ -13,7 +13,6 @@ import Lazyload from './components/lazyload'
 import Loading from './components/loading'
 import Radio from './components/radio'
 import Scroll from './components/scroll'
-import Scroller from './components/scroller'
 
 const version = '1.0.0'
 const components = [
@@ -27,8 +26,7 @@ const components = [
   Icon,
   Loading,
   Radio,
-  Scroll,
-  Scroller
+  Scroll
 ]
 
 const install = (Vue, config = {}) => {
@@ -66,8 +64,7 @@ export {
   Lazyload,
   Loading,
   Radio,
-  Scroll,
-  Scroller
+  Scroll
 }
 
 export default {
