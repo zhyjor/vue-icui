@@ -7,6 +7,7 @@ import Checkbox from './components/checkbox'
 import Group from './components/group'
 import Icon from './components/icon'
 import Lazyload from './components/lazyload'
+import Picker from './components/picker'
 import Radio from './components/radio'
 import Scroller from './components/scroller'
 
@@ -18,6 +19,7 @@ const components = [
   Checkbox,
   Group,
   Icon,
+  Picker,
   Radio,
   Scroller
 ]
@@ -54,6 +56,7 @@ export {
   Group,
   Icon,
   Lazyload,
+  Picker,
   Radio,
   Scroller
 }

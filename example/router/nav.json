@@ -240,25 +240,31 @@
     ]
   },
   {
-    "groupTitle": "测试布局",
+    "groupTitle": "-------- 测试布局 --------",
     "navItems": [
       {
         "path": "/icon",
         "name": "icon",
         "description": "小红点图标",
-        "icon": "icon"
+        "icon": "amy-ui-spinner"
       },
       {
         "path": "/checkbox",
         "name": "checkbox",
         "description": "checkbox列表",
-        "icon": "checkbox"
+        "icon": "amy-ui-spinner"
       },
       {
         "path": "/radio",
         "name": "radio",
         "description": "radio 列表",
-        "icon": "radio"
+        "icon": "amy-ui-spinner"
+      },
+      {
+        "path": "/picker",
+        "name": "picker",
+        "description": "picker 测试",
+        "icon": "amy-ui-spinner"
       }
     ]
   }
