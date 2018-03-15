@@ -20,7 +20,7 @@
     <v-icui-dialog
       v-show="dialog2Show"
       type="alert"
-      title="弹窗标题"
+      title=""
       @weui-dialog-confirm="handleDialogAction('确定', 2)">
       弹窗内容，告知当前页面信息等
     </v-icui-dialog>

@@ -14,7 +14,6 @@ import Picker from './components/picker'
 import Loading from './components/loading'
 import Radio from './components/radio'
 import Scroll from './components/scroll'
-import Scroller from './components/scroller'
 
 const version = '1.0.0'
 const components = [
@@ -29,8 +28,7 @@ const components = [
   Picker,
   Loading,
   Radio,
-  Scroll,
-  Scroller
+  Scroll
 ]
 
 const install = (Vue, config = {}) => {
@@ -69,8 +67,7 @@ export {
   Picker,
   Loading,
   Radio,
-  Scroll,
-  Scroller
+  Scroll
 }
 
 export default {
