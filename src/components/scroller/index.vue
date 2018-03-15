@@ -8,11 +8,10 @@
 
 <script type="text/ecmascript-6">
   import {create} from '../../utils'
-  import Vue from 'vue'
+  import scroller from 'iscroll/build/iscroll-probe.js'
 
   export default create({
     name: 'icui-scroller',
-
     props: {
       options: {
         type: Object,
@@ -85,7 +84,7 @@
       this.iscroll && this.iscroll.destroy()
       this.iscroll = null
     },
-    mount () {
+    mounted () {
       const events = [
         'beforeScrollStart',
         'scrollCancel',
@@ -104,7 +103,7 @@
         this.$refs.scrollView.scrollTop = 0
         for (key in attributes) {
           value = attributes[key]
-          if (value instanceof global.Attr && value.indexOf('data-v-') > -1) {
+          if (value instanceof global.Attr && value.toString().indexOf('data-v-') > -1) {
             this.$refs.scroller.attributes.setNamedItem(document.createAttribute(value.name))
           }
         }
@@ -114,9 +113,9 @@
         }
       }, 0)
       this.$nextTick(() => {
-        const IScroll = Vue._IScroll
+        const IScroll = scroller
         this.iscroll = new IScroll(this.$refs.scrollView, this.options)
-        events.forEach(events => {
+        events.forEach(event => {
           this.iscroll.on(event, () => this.$emit(event, this.iscroll))
         })
         this._registPullEvents()

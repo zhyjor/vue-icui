@@ -33,6 +33,7 @@ module.exports = {
         "allowFirstLine": false
       }
     }],
-    "indent":0
+    "indent":0,
+    "no-mixed-operators":0
   }
 }
