@@ -2,11 +2,11 @@
   <div>
     <div class="wrap">
       <div class="line"/>
-      <div class="item" id="scroll-left">
+      <div class="item" id="scroll-left" @click="runScrollLeft">
         <ul>
           <li/>
           <li/>
-          <li :key="item.id" v-for="item in yuans"> {{ item }} </li>
+          <li :key="item.id" v-for="item in yuansDef"> {{ item }} </li>
         </ul>
       </div>
       <span>元</span>
@@ -14,7 +14,7 @@
         <ul>
           <li/>
           <li/>
-          <li :key="item.id" v-for="item in jiaos"> {{ item }} </li>
+          <li :key="item.id" v-for="item in jiaosDef"> {{ item }} </li>
         </ul>
       </div>
       <span>角</span>
@@ -51,8 +51,21 @@
         jiaosDef: []
       }
     },
-    created : function () {
-      initData()
+    created: function () {
+        this.yuansDef = []
+        this.jiaosDef = []
+        for (var i = 0; i < 100; i++) {
+          this.yuansDef.push(i)
+          this.jiaosDef.push(i)
+        }
+    },
+    mounted: function () {
+      // 这里是vue初始化完成后执行的函数
+      this.$nextTick(function () {
+        var _this = this
+        _this.runScrollLeft() // 初始化iscroll
+        _this.runScrollRight()
+      })
     },
     methods: {
       cancelClick (event) {
@@ -61,18 +74,7 @@
       confirmClick (event) {
         this.$emit('click', event)
       },
-      initData () {
-        this.yuans = []
-        this.jiaos = []
-        for (var i = 0; i < 100; i++) {
-          this.yuansDef.push(i)
-          this.jiaosDef.push(i)
-        }
-      }
-    },
-    computed: {
-      getResult () {
-        // 设置元的滚轮
+      runScrollLeft: function () {
         var scrollLeft = new IScroll('#scroll-left', {
           vScroll: false,
           snap: 'li',
@@ -82,7 +84,6 @@
           wheelAction: 'zoom',
           fadeScrollbars: true
         })
-
         scrollLeft.on('scrollEnd', function () {
           console.log('我停止了')
           var num = -(scrollLeft.y / 40)
@@ -98,7 +99,8 @@
             }
           })
         })
-
+      },
+      runScrollRight: function () {
         var scrollRight = new IScroll('#scroll-right', {
           vScroll: false,
           snap: 'li',
@@ -108,7 +110,6 @@
           wheelAction: 'zoom',
           fadeScrollbars: true
         })
-
         scrollRight.on('scrollEnd', function () {
           console.log('我停止了')
           var num = -(scrollRight.y / 40)
@@ -123,9 +124,6 @@
             }
           })
         })
-
-        this.result = parseInt(this.yuan) + parseInt(this.jiao)
-        return this.result
       }
     }
   })

@@ -294,6 +294,12 @@
         "name": "picker",
         "description": "picker 测试",
         "icon": "amy-ui-spinner"
+      },
+      {
+        "path": "/picker2",
+        "name": "picker2",
+        "description": "picker2 测试",
+        "icon": "amy-ui-spinner"
       }
     ]
   }
