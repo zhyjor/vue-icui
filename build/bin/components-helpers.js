@@ -3,7 +3,7 @@ const path = require('path')
 
 function getComponents () {
     const dirs = fs.readdirSync(path.resolve(__dirname,'../../src/components'))
-    const excludes = ['.DS_Store']
+    const excludes = ['.DS_Store','./src/components/dialog/index.vue']
     return dirs.filter(dirName => excludes.indexOf(dirName) === -1)
 }
 

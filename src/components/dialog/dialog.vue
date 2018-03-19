@@ -1,33 +1,38 @@
 <template>
-  <div :class="'weui-dialog__' + type">
+  <div :class="'weui-dialog__' + type" v-show="isVisible">
     <div class="weui-mask"/>
     <div class="weui-dialog">
       <div class="weui-dialog__hd">
         <div class="weui-dialog__title">{{ title }}</div>
       </div>
       <div class="weui-dialog__bd">
-        <slot/>
+        <slot>
+          <span>{{ content }}</span>
+        </slot>
       </div>
       <div class="weui-dialog__ft">
         <a
           v-if="type === 'confirm'"
           href="javascript:;"
           class="weui-dialog__btn weui-dialog__btn_default"
-          @click="dispathEventAndClose('weui-dialog-cancel')">{{ cancelButton }}</a>
+          @click="confirm('weui-dialog-cancel')">{{ cancelButton }}</a>
         <a
           href="javascript:;"
           class="weui-dialog__btn weui-dialog__btn_primary"
-          @click="dispathEventAndClose('weui-dialog-confirm')">{{ confirmButton }}</a>
+          @click="cancel('weui-dialog-confirm')">{{ confirmButton }}</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import {create} from '../../utils'
+  import apiMixin from '../../common/mixins/api'
 
-  export default create({
+  const EVENT_CONFIRM = 'confirm'
+  const EVENT_CANCEL = 'cancel'
+  export default {
     name: 'v-icui-dialog',
+    mixins: [apiMixin],
     props: {
       /**
        * 对话框类型
@@ -49,6 +54,13 @@
       },
 
       /**
+       * content
+       */
+      content: {
+        type: String,
+        required: true
+      },
+      /**
        * 确定按钮名称
        */
       confirmButton: {
@@ -67,11 +79,21 @@
       }
 
     },
-
+    data () {
+      return {}
+    },
     methods: {
+      confirm (e) {
+        this.hide()
+        this.$emit(EVENT_CONFIRM, e)
+      },
+      cancel (e) {
+        this.hide()
+        this.$emit(EVENT_CANCEL, e)
+      },
       dispathEventAndClose (event) {
         this.$emit(event)
       }
     }
-  })
+  }
 </script>

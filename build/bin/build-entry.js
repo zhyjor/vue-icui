@@ -37,10 +37,6 @@ const install = (Vue, config = {}) => {
     attempt: 3,
     ...config.lazyload
   })
- // Vue._IScroll = config.IScroll || config
- Vue.$dialog = Vue.prototype.$dialog = Dialog
- // Vue.$toast = Vue.prototype.$toast = Toast
- // Vue.$toptips = Vue.prototype.$toptips = TopTips
 }
 
 /* istanbul ignore if */
