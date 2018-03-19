@@ -11,7 +11,6 @@
         <v-icui-badge slot="ft" v-if="nav.status === 'todo'">Todo</v-icui-badge>
       </v-icui-cell>
     </v-icui-group>
-
   </div>
 </template>
 

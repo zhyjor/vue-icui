@@ -1,11 +1,11 @@
 <template>
   <div class="icui-cells icui-cells_radio">
-    <label class="icui-cell icui-check__label" for="x11">
+    <label class="icui-cell icui-check__label">
       <div class="icui-cell__bd">
         <p>{{ leftTip }}</p>
       </div>
       <div class="icui-cell__ft" @click="handleClick">
-        <input type="radio" class="icui-check" name="radio1" id="x11">
+        <input type="radio" class="icui-check" name="radio1">
         <span class="icui-icon-checked"/>
       </div>
     </label>

@@ -15,13 +15,13 @@
       return {
         items: [
           {
-            leftTip: '运营商：'
+            leftTip: '运营商'
           },
           {
-            leftTip: '管理员：'
+            leftTip: '管理员'
           },
           {
-            leftTip: '普通人：'
+            leftTip: '普通用户'
           }
         ]
       }
@@ -33,3 +33,11 @@
     }
   }
 </script>
+
+<style scoped lang="scss">
+  ul li{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+</style>
