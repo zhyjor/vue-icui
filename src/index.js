@@ -11,8 +11,6 @@ import Group from './components/group'
 import Icon from './components/icon'
 import Lazyload from './components/lazyload'
 import Loading from './components/loading'
-import Picker from './components/picker'
-import Picker2 from './components/picker2'
 import Radio from './components/radio'
 import Scroll from './components/scroll'
 
@@ -27,8 +25,6 @@ const components = [
   Group,
   Icon,
   Loading,
-  Picker,
-  Picker2,
   Radio,
   Scroll
 ]
@@ -67,8 +63,6 @@ export {
   Icon,
   Lazyload,
   Loading,
-  Picker,
-  Picker2,
   Radio,
   Scroll
 }
