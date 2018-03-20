@@ -288,18 +288,6 @@
         "name": "radio",
         "description": "radio 列表",
         "icon": "amy-ui-spinner"
-      },
-      {
-        "path": "/picker",
-        "name": "picker",
-        "description": "picker 测试",
-        "icon": "amy-ui-spinner"
-      },
-      {
-        "path": "/mpicker",
-        "name": "mpicker",
-        "description": "mpicker 测试",
-        "icon": "amy-ui-spinner"
       }
     ]
   }
