@@ -296,9 +296,9 @@
         "icon": "amy-ui-spinner"
       },
       {
-        "path": "/picker2",
-        "name": "picker2",
-        "description": "picker2 测试",
+        "path": "/mpicker",
+        "name": "mpicker",
+        "description": "mpicker 测试",
         "icon": "amy-ui-spinner"
       }
     ]

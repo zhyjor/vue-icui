@@ -104,7 +104,7 @@
     "sinon": "^4.1.2",
     "style-loader": "^0.20.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^2.1.1",
+    "stylus-loader": "^3.0.2",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "uppercamelcase": "3.0.0",
     "url-loader": "0.6.2",
