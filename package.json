@@ -25,8 +25,8 @@
   ],
   "scripts": {
     "build:entry": "node build/bin/build-entry.js",
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "dev1": "npm run build:entry && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+    "dev1": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "npm run build:entry && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
   },
   "dependencies": {
     "better-scroll": "^1.8.4",
