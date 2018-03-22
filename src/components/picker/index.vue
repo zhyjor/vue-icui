@@ -12,9 +12,11 @@
             <div class="mask-top border-bottom-1px"></div>
             <div class="mask-bottom border-top-1px"></div>
             <div class="wheel-wrapper" ref="wheelWrapper">
-              <div class="wheel" v-for="data in pickerData">
+              <div class="wheel" v-for="(data, wheelIndex) in pickerData" :key="data.id" :wheelIndex="wheelIndex">
                 <ul class="wheel-scroll">
-                  <li v-for="item in data" :class="isSelected? 'wheel-item-selected': 'wheel-item'" >{{item.text}}</li>
+                  <li v-for="(item,index) in data"
+                      :class=" index === currentNum[wheelIndex] ? 'wheel-item-selected': 'wheel-item'">{{item.text}}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -27,8 +29,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import {create} from '../../utils'
   import BScroll from 'better-scroll'
+  import {create} from '../../utils'
   const STATE_HIDE = 0
   const STATE_SHOW = 1
   const COMPONENT_NAME = 'v-icui-picker'
@@ -37,7 +39,7 @@
   const EVENT_CANCEL = 'cancel'
   const EVENT_CHANGE = 'change'
 
-  export default create ({
+  export default create({
     name: COMPONENT_NAME,
     props: {
       data: {
@@ -61,7 +63,8 @@
         type: Array,
         default() {
           return []
-        }
+        },
+        required: false
       },
       value: {
         type: Boolean,
@@ -75,7 +78,11 @@
         pickerSelectedIndex: this.selectedIndex,
         pickerSelectedVal: [],
         pickerSelectedText: [],
-        isSelected: false
+        isSelected: false,
+        tops: [],
+        scrollY: 0,
+        positionY: 0,
+        num: [0, 0, 0, 0]
       }
     },
     created() {
@@ -92,12 +99,10 @@
           return
         }
         this.hide()
-
         let changed = false
         for (let i = 0; i < this.pickerData.length; i++) {
           let index = this.wheels[i].getSelectedIndex()
           this.pickerSelectedIndex[i] = index
-
           let value = null
           if (this.pickerData[i].length) {
             value = this.pickerData[i][index].value
@@ -152,6 +157,10 @@
       },
       setSelectedIndex(index) {
         this.pickerSelectedIndex = index
+      },
+      getSelectedIndex(){
+        //为时已晚了啊 应该是被点击了才会生成
+        return this.pickerSelectedIndex
       },
       refill(datas) {
         let ret = []
@@ -218,24 +227,42 @@
             probeType: 3
           })
 
+          //监听数组数据变化
+          let _self = this
           this.wheels[i].on('scrollEnd', () => {
             this.$emit(EVENT_CHANGE, i, this.wheels[i].getSelectedIndex())
+            var positionYAbs = Math.abs(_self.wheels[i].y)
+            var currentIndex = positionYAbs / 36
+            // 数组建议更新数据方法 vm.$set(vm.items, indexOfItem, newValue)  否则无法响应式绑定
+            _self.$set(_self.num, i, currentIndex);
+            console.log('this.positionY：' + positionYAbs + 'num：' + _self.num)
           })
+
         } else {
           this.wheels[i].refresh()
         }
-
         return this.wheels[i]
       },
       _canConfirm() {
-        return this.wheels.every((wheel) => {
+        return this.wheels.every((wheel, index) => {
           return !wheel.isInTransition
         })
+      },
+      currentSelectedIndex (y, index) {
+        var positionYAbs = Math.abs(y)
+        this.num[index] = positionYAbs / 36
+        console.log('this.positionY：' + positionYAbs + 'num：' + this.num)
+        return this.num
       }
     },
     watch: {
       data(newData) {
         this.setData(newData)
+      }
+    },
+    computed: {
+      currentNum() {
+        return this.num
       }
     }
   })
@@ -338,7 +365,7 @@
               height: 36px
               overflow: hidden
               white-space: nowrap
-              font-size: 20px
+              font-size: 25px
               color: $color-main
     .picker-footer
       height: 20px

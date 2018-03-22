@@ -3,19 +3,20 @@
     <h3>picker 测试</h3>
     <button style="width: 100px;height: 100px;margin-left: 50px" @click="showPicker(0)" ref="select0">单列选项</button>
     <v-icui-picker @select="handleSelect(0,arguments)" :selected-index="selectedIndex[0]"
-            ref="picker0" :title="title" :cancelTxt="cancelTxt"
-            :confirmTxt="confirmTxt"></v-icui-picker>
+                   ref="picker0" :title="title" :cancelTxt="cancelTxt"
+                   :confirmTxt="confirmTxt"></v-icui-picker>
 
-    <button style="width: 100px;height: 100px;margin-top: 50px;margin-left: 50px" @click="showPicker(1)" ref="select1">点击设置价格</button>
+    <button style="width: 100px;height: 100px;margin-top: 50px;margin-left: 50px" @click="showPicker(1)" ref="select1">
+      点击设置价格
+    </button>
     <v-icui-picker @select="handleSelect(1,arguments)" :data="numData" :selected-index="selectedIndex[1]"
-            ref="picker1" :title="title" :cancelTxt="cancelTxt"
-            :confirmTxt="confirmTxt"></v-icui-picker>
+                   ref="picker1" :title="title" :cancelTxt="cancelTxt"
+                   :confirmTxt="confirmTxt"></v-icui-picker>
   </div>
 
 </template>
 
 <script type="text/ecmascript-6">
-
   let yuans = []
   let jiaos = []
   let yuanUnit = [{
@@ -54,9 +55,9 @@
       handleSelect(index, args) {
         //选择的项目在这块做处理
         this.selectedText.splice(index, 1, args[2].join('，'))
-        console.log(args[1][0]+'>>>'+args[1][1]+'>>>'+args[1][2]+'>>>'+args[1][3]+'>>>')
-        var result = parseInt(args[1][0]) + parseInt(args[1][2])/10;
-        alert('您选择的价格：' + result +'元')
+        console.log(args[1][0] + '>>>' + args[1][1] + '>>>' + args[1][2] + '>>>' + args[1][3] + '>>>')
+        var result = parseInt(args[1][0]) + parseInt(args[1][2]) / 10;
+        alert('您选择的价格：' + result + '元')
       }
     },
     created () {
@@ -67,7 +68,7 @@
         yuans.push(obj)
       }
 
-      for (var i=0;i<10;i++){
+      for (var i = 0; i < 10; i++) {
         var obj = new Object()
         obj.text = i
         obj.value = i
