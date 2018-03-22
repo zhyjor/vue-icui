@@ -9,7 +9,6 @@ function buildWevueEntry () {
   const uninstallComponents = [
     'Lazyload',
     'InfiniteScroll',
-    'Toast',
     'TopTips'
   ]
 

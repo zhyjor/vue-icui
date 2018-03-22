@@ -1,14 +1,13 @@
 <template>
-  <div class="cube-loading">
-    <span class="cube-loading-spinners" :style="style">
-      <i class="cube-loading-spinner" v-for="item in balde"/>
+  <div class="icui-loading">
+    <span class="icui-loading-spinners" :style="style">
+      <i class="icui-loading-spinner" v-for="item in balde"/>
     </span>
   </div>
-
 </template>
 
 <script type="text/ecmascript-6">
-  const COMPONENT_NAME = 'icui-v-loading'
+  const COMPONENT_NAME = 'v-icui-loading'
 
   export default {
     name: COMPONENT_NAME,
@@ -35,10 +34,8 @@
       }
     }
   }
-
 </script>
 
 <style scoped lang="scss">
-  @import '../../common/style/variable.scss';
-
 </style>
+

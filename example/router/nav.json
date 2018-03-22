@@ -25,6 +25,18 @@
         "name": "dialog",
         "description": "弹窗",
         "icon": "badge_new"
+      },
+      {
+        "path": "/popup",
+        "name": "popup",
+        "description": "提示框",
+        "icon": "badge_new"
+      },
+      {
+        "path": "/toast",
+        "name": "toast",
+        "description": "吐司",
+        "icon": "badge_new"
       }
     ]
   },
