@@ -24,9 +24,12 @@
     "src"
   ],
   "scripts": {
+    "build": "node build/build.js",
+    "build:component": "node build/build-component.js",
     "build:entry": "node build/bin/build-entry.js",
-    "dev1": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "dev": "npm run build:entry && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+    "build:release": "npm run build:entry && npm run build:component && npm run build",
+    "dev": "npm run build:entry && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "pub": "node build/release.js"
   },
   "dependencies": {
     "better-scroll": "^1.8.4",
