@@ -58,7 +58,7 @@ inquirer.prompt({
           return new Listr([
             {
               title: 'Git push tag',
-              task: () => execa.shell(`git push origin refs/tags/v${answer.version}`)
+              // task: () => execa.shell(`git push origin refs/tags/v${answer.version}`)
             },
             {
               title: 'Git push',
