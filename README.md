@@ -9,10 +9,16 @@ vue-icui 是一套基于vue.js 的移动端组件库，封装了一系列组件,
 
 目前可以通过npm的方式来引入，引入后通过`vue.use(icuiVue)`的方式来使用
 
-```
+```js
 // npm
 $ npm install vue-icui -S
 
+在main.js里
+
+import 'vue-icui/lib/style.css'
+import icuiVue from 'vue-icui'
+
+Vue.use(icuiVue)
 ```
 
 
@@ -21,8 +27,8 @@ $ npm install vue-icui -S
 克隆代码，安装依赖，并运行本地服务
 
 ```
-$ git clone https://github.com/tianyong90/we-vue.git
-$ cd we-vue && npm install
+$ https://github.com/zhyjor/vue-icui
+$ cd vue-icui && npm install
 $ npm run dev
 ```
 
