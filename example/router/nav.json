@@ -37,6 +37,12 @@
         "name": "toast",
         "description": "吐司",
         "icon": "badge_new"
+      },
+      {
+        "path": "/slide",
+        "name": "slide",
+        "description": "滑动",
+        "icon": "badge_new"
       }
     ]
   },

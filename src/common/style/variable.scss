@@ -16,12 +16,12 @@ $color-title-background: #f7f7f7;
 $color-dark-grey: #333;
 $color-grey: #666;
 $color-light-grey: #999;
-$color-light-grey-s: #ccc;
 $color-light-grey-ss: #eee;
 $color-white: #fff;
 //// 其他辅色
 
 ////// 灰色
+$color-light-grey-s: #ccc;
 $color-light-grey-sss: #fcfcfc;
 ////// 橘色
 $color-dark-orange: #f08250;
@@ -113,3 +113,7 @@ $box-shadow-content: 0 1px 3px rgba(0, 0, 0, .1);
 // popup
 $popup-mask-bgc: rgb(37, 38, 45);
 $popup-mask-opacity: .4;
+
+// slide
+$slide-dot-bgc: $color-light-grey-s;
+$slide-dot-active-bgc: $color-orange;
