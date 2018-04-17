@@ -43,6 +43,18 @@
         "name": "slide",
         "description": "滑动",
         "icon": "badge_new"
+      },
+      {
+        "path": "/imageViewer",
+        "name": "viewer",
+        "description": "图片查看",
+        "icon": "badge_new"
+      },
+      {
+        "path": "/twHandler",
+        "name": "bar",
+        "description": "bar",
+        "icon": "badge_new"
       }
     ]
   },

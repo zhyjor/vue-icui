@@ -34,15 +34,36 @@
           {
             url: 'http://www.didichuxing.com/',
             image: require('../assets/demo/1.jpg')
-          }, {
+          },
+          {
+            url: 'http://www.didichuxing.com/',
+            image: require('../assets/demo/2.jpg')
+          },
+          {
+            url: 'http://www.didichuxing.com/',
+            image: require('../assets/demo/3.jpg')
+          },{
             url: 'http://www.didichuxing.com/',
             image: require('../assets/demo/4.jpg')
-          }, {
+          },
+          {
+            url: 'http://www.didichuxing.com/',
+            image: require('../assets/demo/5.jpg')
+          },
+          {
+            url: 'http://www.didichuxing.com/',
+            image: require('../assets/demo/6.jpg')
+          },
+          {
             url: 'http://www.didichuxing.com/',
             image: require('../assets/demo/7.jpg')
-          }, {
+          },
+          {
             url: 'http://www.didichuxing.com/',
             image: require('../assets/demo/8.png')
+          }, {
+            url: 'http://www.didichuxing.com/',
+            image: require('../assets/demo/9.jpg')
           }
         ],
         loop: false,
@@ -76,30 +97,29 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
-  .wrapper
-    width: 100%
-    background: #efeff4
-
-  .slide-container {
-    /*height: 75px;*/
-    width 100%
-    margin-bottom: 15px;
-    transform: translateZ(0px);
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: 0 2px 9px #ddd;
-    .cube-slide-dots {
-      .my-dot {
-        height: auto;
-        font-size: 12px;
-        background: none;
-        &.active {
-          color: #fc9153;
+<style lang="scss" rel="stylesheet/scss">
+  .wrapper {
+    width: 100%;
+    /*background: #efeff4;*/
+    position: relative;
+    .slide-container {
+      height: 100%;
+      /*width: 100%;*/
+      /*margin-bottom: 15px;*/
+      transform: translateZ(0px);
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 2px 9px #ddd;
+      .cube-slide-dots {
+        .my-dot {
+          height: auto;
+          font-size: 12px;
+          background: none;
+          &.active {
+            color: #fc9153;
+          }
         }
       }
     }
   }
-
-
 </style>
