@@ -55,6 +55,12 @@
         "name": "bar",
         "description": "bar",
         "icon": "badge_new"
+      },
+      {
+        "path": "/twContent",
+        "name": "tc",
+        "description": "tc",
+        "icon": "badge_new"
       }
     ]
   },
