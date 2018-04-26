@@ -244,20 +244,19 @@ wewew w
 
     }
     .ct-radis-block {
-      z-index: 0;
+      margin-top: .65625rem;
       position: relative;
-      flex-direction: column;
       display: flex;
       .ct-radis-block-content{
-        margin-top: .65625rem;
+        position: relative;
         overflow: hidden;
         z-index: 0;
         flex-direction: column;
         display: flex;
-        align-items: center;
         .ct-radis-line{
-          height: 145px;
-          width: 260px;
+          padding-bottom: 56.25%;
+          width: 100%;
+          display: block;
           background-color: red;
           border-radius: 1rem;
           overflow: hidden;
@@ -265,8 +264,6 @@ wewew w
           position: relative;
           flex-direction: column;
           display: flex;
-
-
         }
       }
 
