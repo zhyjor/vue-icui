@@ -61,6 +61,12 @@
         "name": "tc",
         "description": "tc",
         "icon": "badge_new"
+      },
+      {
+        "path": "/drawer",
+        "name": "drawer",
+        "description": "drawer",
+        "icon": "badge_new"
       }
     ]
   },
