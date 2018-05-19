@@ -58,9 +58,10 @@
     <div class="ct-radis-block">
       <div class="ct-radis-block-content">
         <div class="ct-radis-line">
-wewew w
         </div>
-
+        <div class="ct-radis-slot">
+          zhege shi
+        </div>
       </div>
     </div>
   </div>
@@ -247,23 +248,32 @@ wewew w
       margin-top: .65625rem;
       position: relative;
       display: flex;
-      .ct-radis-block-content{
+      .ct-radis-block-content {
         position: relative;
         overflow: hidden;
+        width: 100%;
         z-index: 0;
         flex-direction: column;
         display: flex;
-        .ct-radis-line{
+        .ct-radis-line {
           padding-bottom: 56.25%;
           width: 100%;
           display: block;
-          background-color: red;
+          background-color: green;
           border-radius: 1rem;
           overflow: hidden;
           z-index: 0;
           position: relative;
           flex-direction: column;
           display: flex;
+        }
+        .ct-radis-slot {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: block;
         }
       }
 
