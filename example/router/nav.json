@@ -67,6 +67,12 @@
         "name": "drawer",
         "description": "drawer",
         "icon": "badge_new"
+      },
+      {
+        "path": "/twImg",
+        "name": "twImg",
+        "description": "twImg",
+        "icon": "badge_new"
       }
     ]
   },
