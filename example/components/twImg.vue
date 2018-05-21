@@ -1,12 +1,12 @@
 <template>
   <div class="ti-wrapper">
-    <div class="ti-cloumn-imgs">
+    <div class="ti-cloumn-imgs" v-for="(item, index) in imgArr">
       <a class="ti-cloumn-a">
         <div class="ti-img-warpper-outer">
           <div class="ti-img-warpper-inner">
             <div class="ti-img-placeholder">
               <div class="ti-img-out-div">
-                <img src="https://pbs.twimg.com/media/Da3u_7lVAAA8guZ?format=jpg&name=360x360"/>
+                <img :src=item.url />
               </div>
             </div>
           </div>
@@ -20,7 +20,21 @@
 
 <script type="text/ecmascript-6">
   export default {
-    name: 'v-icui-imgList'
+    name: 'v-icui-imgList',
+    data () {
+      return {
+        imgArr: [{
+          url: require('../assets/demo/2.jpg')
+        },
+//          {
+//            url: require('../assets/demo/3.jpg')
+//          },
+          {
+            url: require('../assets/demo/1.jpg')
+          }
+        ]
+      }
+    }
   }
 
 </script>
@@ -76,7 +90,7 @@
             align-items: stretch;
             .ti-img-placeholder {
               background-color: rgb(32, 34, 38);
-              opacity: 0;
+              /*opacity: 0;*/
               z-index: 1;
               transition-property: opacity;
               transition-duration: 100ms;
@@ -108,17 +122,17 @@
               background-position: center center;
               background-repeat: no-repeat;
               background-size: cover;
-              background-image: url(https://pbs.twimg.com/media/Da3u_7lVAAA8guZ?format=jpg&name=360x360);
+              /*background-image: url(../assets/demo/1.jpg);*/
 
               img {
-                opacity: 0;
+                /*opacity: 0;*/
                 position: absolute;
                 bottom: 0;
                 top: 0;
                 left: 0;
                 right: 0;
-                width:100%;
-                height: 100%;
+                width: 100%;
+                /*height: 100%;*/
 
               }
             }

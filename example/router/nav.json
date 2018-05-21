@@ -46,19 +46,19 @@
       },
       {
         "path": "/imageViewer",
-        "name": "viewer",
+        "name": "imageViewer",
         "description": "图片查看",
         "icon": "badge_new"
       },
       {
         "path": "/twHandler",
-        "name": "bar",
+        "name": "twHandler",
         "description": "bar",
         "icon": "badge_new"
       },
       {
         "path": "/twContent",
-        "name": "tc",
+        "name": "twContent",
         "description": "tc",
         "icon": "badge_new"
       },

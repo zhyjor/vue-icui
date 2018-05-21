@@ -60,7 +60,9 @@
         <div class="ct-radis-line">
         </div>
         <div class="ct-radis-slot">
-          zhege shi
+          <img-list></img-list>
+          <!--<img src="https://pbs.twimg.com/media/Da3u_7lVAAA8guZ?format=jpg&name=360x360"/>-->
+
         </div>
       </div>
     </div>
@@ -70,8 +72,12 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import imgList from './twImg.vue'
   export default {
     name: 'content-text',
+    components: {
+      imgList
+    }
   }
 </script>
 
@@ -253,14 +259,14 @@
         overflow: hidden;
         width: 100%;
         z-index: 0;
+        border-radius: 1rem;
+        border: 1px solid rgb(204, 214, 221);
         flex-direction: column;
         display: flex;
         .ct-radis-line {
           padding-bottom: 56.25%;
           width: 100%;
           display: block;
-          background-color: green;
-          border-radius: 1rem;
           overflow: hidden;
           z-index: 0;
           position: relative;
@@ -273,7 +279,9 @@
           bottom: 0;
           left: 0;
           right: 0;
+          z-index: -1;
           display: block;
+          overflow: hidden;
         }
       }
 
