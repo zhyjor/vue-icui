@@ -12,6 +12,30 @@
           </div>
         </div>
       </a>
+      <a class="ti-cloumn-a">
+        <div class="ti-img-warpper-outer">
+          <div class="ti-img-warpper-inner">
+            <div class="ti-img-placeholder">
+              <div class="ti-img-out-div">
+                <img :src=item.url />
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="ti-cloumn-imgs" v-for="(item, index) in imgArr">
+      <a class="ti-cloumn-a">
+        <div class="ti-img-warpper-outer">
+          <div class="ti-img-warpper-inner">
+            <div class="ti-img-placeholder">
+              <div class="ti-img-out-div">
+                <img :src=item.url />
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
 
   </div>
@@ -23,9 +47,13 @@
     name: 'v-icui-imgList',
     data () {
       return {
-        imgArr: [{
-          url: require('../assets/demo/2.jpg')
-        },
+        imgArr: [
+//          {
+//            url: require('../assets/demo/1.jpg')
+//          },
+//          {
+//            url: require('../assets/demo/2.jpg')
+//          },
 //          {
 //            url: require('../assets/demo/3.jpg')
 //          },
