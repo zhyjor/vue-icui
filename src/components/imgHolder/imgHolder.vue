@@ -20,8 +20,9 @@
 </template>
 
 <script type="text/ecmascript-6">
+  const COMPONENT_NAME = 'v-icui-imgHolder'
   export default {
-    name: 'v-icui-imgList',
+    name: COMPONENT_NAME,
     data () {
       return {
         arrId: [[
@@ -32,7 +33,7 @@
 //            url: require('../assets/demo/2.jpg')
 //          },
           {
-            url: require('../assets/demo/3.jpg')
+            url: require('../../assets/demo/3.jpg')
           }
         ],
           [
@@ -40,10 +41,10 @@
 //              url: require('../assets/demo/1.jpg')
 //            },
             {
-              url: require('../assets/demo/2.jpg')
+              url: require('../../assets/demo/2.jpg')
             },
             {
-              url: require('../assets/demo/3.jpg')
+              url: require('../../assets/demo/3.jpg')
             },
           ],
 //          [

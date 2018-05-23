@@ -25,7 +25,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import handler from './twHandler.vue'
+  import handler from './handlerbar.vue'
   import slideView from './slide.vue'
 
   export default {

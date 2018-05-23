@@ -51,15 +51,15 @@
         "icon": "badge_new"
       },
       {
-        "path": "/twHandler",
-        "name": "twHandler",
-        "description": "bar",
+        "path": "/handlerbar",
+        "name": "handlerbar",
+        "description": "handlerbar",
         "icon": "badge_new"
       },
       {
-        "path": "/twContent",
-        "name": "twContent",
-        "description": "tc",
+        "path": "/panel",
+        "name": "panel",
+        "description": "panel",
         "icon": "badge_new"
       },
       {

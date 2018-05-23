@@ -82,8 +82,9 @@
 </template>
 
 <script type="text/ecmascript-6">
+  const COMPONENT_NAME = 'v-icui-handlerbar'
   export default {
-    name: 'handler',
+    name: COMPONENT_NAME,
     data () {
       let liked = false
       return {
