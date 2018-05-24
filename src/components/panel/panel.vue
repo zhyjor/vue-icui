@@ -24,10 +24,8 @@
                 <span>
                   @newscientist
                 </span>
-
               </div>
             </div>
-
           </div>
         </a>
         <span class="ct-dot-span">·</span>
@@ -177,44 +175,34 @@
               }
             }
             .ct-accoutn-nick {
+              min-width: 0;
               margin-left: 0.328rem;
               flex-shrink: 1 !important;
               flex-direction: row;
               align-items: center;
               white-space: nowrap;
               text-overflow: ellipsis;
+              word-wrap: break-word;
               z-index: 0;
               position: relative;
-              flex-basis: auto !important;
+              /*flex-basis: auto !important;*/
               display: flex;
               .ct-accoutn-nick-text {
-                /*color: rgb(101, 119, 134);*/
-                /*font-weight: 400;*/
-                /*font-size: 1rem;*/
-                /*white-space: nowrap;*/
-                /*text-overflow: ellipsis;*/
-                /*line-height: 1.313;*/
-                /*word-wrap: break-word;*/
-                /*text-decoration: none;*/
-                /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;*/
-                /*display: inline;*/
-                /*overflow: hidden;*/
-                /*flex-direction: row;*/
-                /*max-width: 100%;*/
-                /*direction: ltr;*/
-                /*unicode-bidi: isolate;*/
+                color: rgb(101, 119, 134);
+                font-weight: 400;
                 font-size: 1rem;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                font-weight: bold;
-                color: #14171a;
-                line-height: 1.3125;
+                line-height: 1.313;
                 word-wrap: break-word;
                 text-decoration: none;
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
                 display: inline;
                 overflow: hidden;
+                flex-direction: row;
                 max-width: 100%;
+                direction: ltr;
+                unicode-bidi: isolate;
               }
             }
 
@@ -245,7 +233,7 @@
             font-size: 1rem;
             line-height: 1.313;
             word-wrap: break-word;
-            white-space: pre-wrap;
+            white-space: normal;
             text-decoration: none;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
             display: inline;
