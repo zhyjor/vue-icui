@@ -6,9 +6,7 @@
           <div class="ct-account-name">
             <div class="ct-account-content">
               <div class="ct-account-left">
-              <span>
-                <span>New Scientist</span>
-              </span>
+                New Scientist
               </div>
               <div class="ct-account-right">
                 <svg viewBox="0 0 24 24" aria-label="认证账号">
@@ -21,14 +19,12 @@
             </div>
             <div class="ct-accoutn-nick">
               <div class="ct-accoutn-nick-text">
-                <span>
-                  @newscientist
-                </span>
+                @newscientist
               </div>
             </div>
           </div>
         </a>
-        <span class="ct-dot-span">·</span>
+        <div class="ct-dot-span">·</div>
         <a class="ct-time">
           <div class="ct-time-content">
             4分钟
@@ -74,6 +70,7 @@
 
 <script type="text/ecmascript-6">
   import imgList from '../imgHolder/imgHolder.vue'
+
   const COMPONENT_NAME = 'v-icui-panel'
   export default {
     name: COMPONENT_NAME,
@@ -101,43 +98,35 @@
       position: relative;
       min-width: 0px;
       min-height: 0px;
-      flex-basis: auto !important;
-      flex-shrink: 0 !important;
+      flex: 0 0 auto;
       display: flex;
       align-items: stretch;
       .ct-block {
         align-items: baseline;
-        flex-shrink: 1 !important;
         flex-direction: row;
+        flex: 0 1 auto;
         z-index: 0;
         position: relative;
-        flex-basis: auto !important;
         display: flex;
         .ct-account-name-a {
-          text-decoration: none !important;
-          flex-shrink: 1 !important;
+          text-decoration: none;
           min-width: 0px;
           display: flex;
-          flex-basis: auto !important;
-          flex-direction: row;
+          flex: 0 1 auto;
           .ct-account-name {
             max-width: 100%;
-            flex-shrink: 1 !important;
-            min-height: 0px;
-            min-width: 0px;
             flex-direction: row;
+            flex: 0 1 auto;
             z-index: 0;
             position: relative;
             display: flex;
             align-items: stretch;
-            flex-basis: auto !important;
             .ct-account-content {
               max-width: 100%;
               flex-direction: row;
               position: relative;
               z-index: 0;
-              flex-basis: auto !important;
-              flex-shrink: 0 !important;
+              flex: 0 0 auto;
               display: flex;
               align-items: stretch;
               .ct-account-left {
@@ -158,8 +147,7 @@
                 flex-direction: row;
                 position: relative;
                 z-index: 0;
-                flex-basis: auto !important;
-                flex-shrink: 0 !important;
+                flex: 0 0 auto;
                 display: flex;
                 align-items: stretch;
                 svg {
@@ -175,30 +163,26 @@
               }
             }
             .ct-accoutn-nick {
-              min-width: 0;
               margin-left: 0.328rem;
-              flex-shrink: 1 !important;
+              flex: 0 1 auto;
               flex-direction: row;
               align-items: center;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              word-wrap: break-word;
               z-index: 0;
               position: relative;
-              /*flex-basis: auto !important;*/
               display: flex;
               .ct-accoutn-nick-text {
-                color: rgb(101, 119, 134);
                 font-weight: 400;
                 font-size: 1rem;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                line-height: 1.313;
+                line-height: 1.3125;
                 word-wrap: break-word;
                 text-decoration: none;
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+                font: inherit;
                 display: inline;
-                overflow: hidden;
+                overflow:hidden;
+                color: rgb(101, 119, 134);
                 flex-direction: row;
                 max-width: 100%;
                 direction: ltr;
@@ -212,7 +196,7 @@
         .ct-dot-span {
           color: rgb(101, 119, 134);
           padding: 0 .328rem;
-          flex-shrink: 0 !important;
+          flex: 0 0 auto;
           font-weight: 400;
           font-size: 1rem;
           line-height: 1.3125;
@@ -227,7 +211,7 @@
           white-space: nowrap;
           text-decoration: none;
           color: rgb(101, 119, 134);
-          flex-shrink: 0 !important;
+          flex: 0 0 auto;
           .ct-time-content {
             font-weight: 400;
             font-size: 1rem;
@@ -244,24 +228,21 @@
       .ct-down-arrow {
         margin-left: 1.313rem;
         cursor: pointer;
-        -webkit-box-pack: center;
         justify-content: center;
         z-index: 0;
         position: relative;
         flex-direction: column;
-        flex-basis: auto !important;
-        flex-shrink: 0 !important;
+        flex: 0 0 auto;
         display: flex;
         align-items: stretch;
         .ct-down-content {
           cursor: pointer;
-          flex-direction: column;
           z-index: 0;
+          position: relative;
+          flex-direction: column;
           display: flex;
           align-items: stretch;
-          flex-basis: auto !important;
-          flex-shrink: 0 !important;
-          align-items: stretch;
+          flex: 0 0 auto;
           span {
             bottom: -5px;
             left: -9px;

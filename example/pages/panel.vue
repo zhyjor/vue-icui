@@ -21,7 +21,7 @@
   import avatar from '../components/avatar.vue'
 
   export default {
-    name: 'content',
+    name: 'v-icui-all-panel',
     data () {
       return {}
     },
@@ -48,8 +48,7 @@
       z-index: 0;
       position: relative;
       flex-direction: column;
-      flex-basis: auto !important;
-      flex-shrink: 0 !important;
+      flex: 0 1 auto;
       display: flex;
       align-items: stretch;
       .v-icui-panel-wrapper-inner {
@@ -57,8 +56,7 @@
         z-index: 0;
         position: relative;
         flex-direction: column;
-        flex-basis: auto !important;
-        flex-shrink: 0 !important;
+        flex: 0 1 auto;
         display: flex;
         align-items: stretch;
         .v-icui-panel-content {
@@ -68,8 +66,7 @@
           flex-direction: row;
           z-index: 0;
           position: relative;
-          flex-basis: auto !important;
-          flex-shrink: 0 !important;
+          flex: 0 1 auto;
           display: flex;
           align-items: stretch;
           .v-icui-panel-ava-wrapper {
@@ -79,7 +76,7 @@
             z-index: 0;
             position: relative;
             flex-direction: column;
-            flex: 1;
+            flex: 1 0 0;
             display: flex;
             align-items: stretch;
           }
@@ -91,7 +88,7 @@
             flex-direction: column;
             display: flex;
             align-items: stretch;
-            flex: 1;
+            flex: 7 0 0;
           }
         }
       }

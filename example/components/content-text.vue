@@ -74,7 +74,7 @@
 <script type="text/ecmascript-6">
   import imgList from './twImg.vue'
   export default {
-    name: 'content-text',
+    name: 'icui-text',
     components: {
       imgList
     }
