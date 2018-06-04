@@ -107,7 +107,8 @@
     z-index: 0;
     position: relative;
     display: flex;
-    color: rgb(255, 255, 255);
+    color: rgb(101, 119, 134);
+    justify-content: space-around;
     /*box-sizing: border-box;*/
     /*background-color: #00a0ff;*/
     .liked {
@@ -116,16 +117,15 @@
     .inner-wrapper {
       display: flex;
       align-items: center;
-      height: 3.28rem;
       box-pack: justify;
-      justify-content: space-around;
+      /*justify-content: space-around;*/
       box-direction: normal;
       box-orient: horizontal;
       flex-direction: row;
       flex: 1;
       .handler-wrapper {
         padding: 0 0.85rem;
-        min-height: 1.875rem;
+        /*min-height: 1.875rem;*/
         overflow: visible;
         flex-grow: 1 !important;
         box-pack: center;
@@ -152,9 +152,9 @@
           display: flex;
           svg {
             fill: currentcolor;
-            font-size: 1.5rem;
+            /*font-size: 1.5rem;*/
             vertical-align: text-bottom;
-            height: 1.25em;
+            height: 1.3rem;
             display: inline-block;
             position: relative;
           }

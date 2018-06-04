@@ -41,10 +41,10 @@
 //              url: require('../assets/demo/1.jpg')
 //            },
             {
-              url: require('../../assets/demo/2.jpg')
+              url: require('../../assets/demo/9.jpg')
             },
             {
-              url: require('../../assets/demo/3.jpg')
+              url: require('../../assets/demo/5.jpg')
             },
           ],
 //          [

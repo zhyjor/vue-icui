@@ -1,4 +1,4 @@
-import Panel from './panel.vue'
+import Panel from './panelAll.vue'
 
 
 Panel.install = function (Vue) {

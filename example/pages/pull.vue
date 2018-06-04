@@ -12,7 +12,9 @@
       @pullingUp="onPullingUp"
       @click="clickItem">
       <ul class="list-content">
-        <li :key="item.id" @click="clickItem($event,item)" class="list-item" v-for="item in data1">{{ item.value }}</li>
+        <li :key="item.id" @click="clickItem($event,item)" class="list-item" v-for="item in data1">
+          <v-icui-panel></v-icui-panel>
+        </li>
       </ul>
     </v-icui-scroll>
   </div>
@@ -24,6 +26,7 @@
   //  import OptionalDemo from './scroll-demo.vue'
   //  import scroll from './scroll.vue'
     import {ease} from '../assets/js/ease'
+  import vIcuiAllPanel from './panel.vue'
 
   export default {
     data () {
@@ -185,6 +188,9 @@
           this.$refs.scroll.initScroll()
         })
       }
+    },
+    components:{
+      vIcuiAllPanel
     }
   }
 </script>
@@ -204,10 +210,6 @@
     z-index: 10;
     background: #fff;
     .list-item {
-      height: 60px;
-      line-height: 60px;
-      font-size: 18px;
-      padding-left: 20px;
       border-bottom: 1px solid #e5e5e5;
     }
   }

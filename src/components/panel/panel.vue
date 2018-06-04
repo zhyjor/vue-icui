@@ -126,7 +126,7 @@
               flex-direction: row;
               position: relative;
               z-index: 0;
-              flex: 0 0 auto;
+              flex: 0 1 auto;
               display: flex;
               align-items: stretch;
               .ct-account-left {
@@ -163,14 +163,17 @@
               }
             }
             .ct-accoutn-nick {
+              display: none;
               margin-left: 0.328rem;
               flex: 0 1 auto;
               flex-direction: row;
               align-items: center;
               z-index: 0;
               position: relative;
-              display: flex;
+              /*display: flex;*/
+              overflow: hidden;
               .ct-accoutn-nick-text {
+                flex: 0 1 auto;
                 font-weight: 400;
                 font-size: 1rem;
                 white-space: nowrap;

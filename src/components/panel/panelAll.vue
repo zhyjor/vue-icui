@@ -4,13 +4,12 @@
       <div class="v-icui-panel-wrapper-inner">
         <div class="v-icui-panel-content">
           <div class="v-icui-panel-ava-wrapper">
-            <avatar></avatar>
+            <v-icui-avatar></v-icui-avatar>
           </div>
           <div class="v-icui-panel-right-wrapper">
-            <v-icui-panel></v-icui-panel>
+            <v-icui-panl-small></v-icui-panl-small>
             <div class="v-icui-panel-right-handler">
-              <v-icui-handlerbar></v-icui-handlerbar>
-
+              <v-icui-h-bar></v-icui-h-bar>
             </div>
           </div>
         </div>
@@ -22,15 +21,19 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import avatar from '../components/avatar.vue'
+  import vIcuiAvatar from './avatar.vue'
+  import vIcuiPanlSmall from './panel.vue'
+  import vIcuiHBar from '../handerBar/handlerbar.vue'
 
   export default {
-    name: 'v-icui-all-panel',
+    name: 'v-icui-panel',
     data () {
       return {}
     },
     components: {
-      avatar
+      vIcuiAvatar,
+      vIcuiPanlSmall,
+      vIcuiHBar
     }
 
   }
