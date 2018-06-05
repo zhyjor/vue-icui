@@ -9,6 +9,12 @@
         "icon": "badge_new"
       },
       {
+        "path": "/column",
+        "name": "column",
+        "description": "栏目",
+        "icon": "badge_new"
+      },
+      {
         "path": "/loading",
         "name": "loading",
         "description": "下拉",
