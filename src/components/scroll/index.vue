@@ -295,7 +295,7 @@
     /*right: 0*/
     /*bottom: 0*/
     overflow: hidden;
-    background: #fff;
+    /*background: #fff;*/
     .scroll-content {
       position: relative;
       z-index: 1;
@@ -303,13 +303,13 @@
     .list-content {
       position: relative;
       z-index: 10;
-      background: #fff;
+      /*background: #fff;*/
       .list-item {
         /*height: 60px;*/
         /*line-height: 60px;*/
         /*font-size: 18px;*/
         /*padding-left: 20px;*/
-        border-bottom: 1px solid #e5e5e5;
+        /*border-bottom: 1px solid #e5e5e5;*/
       }
     }
   }
