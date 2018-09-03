@@ -9,12 +9,6 @@
         "icon": "badge_new"
       },
       {
-        "path": "/column",
-        "name": "column",
-        "description": "栏目",
-        "icon": "badge_new"
-      },
-      {
         "path": "/loading",
         "name": "loading",
         "description": "下拉",
@@ -45,39 +39,9 @@
         "icon": "badge_new"
       },
       {
-        "path": "/slide",
-        "name": "slide",
-        "description": "滑动",
-        "icon": "badge_new"
-      },
-      {
-        "path": "/imageViewer",
-        "name": "imageViewer",
-        "description": "图片查看",
-        "icon": "badge_new"
-      },
-      {
-        "path": "/handlerbar",
-        "name": "handlerbar",
-        "description": "handlerbar",
-        "icon": "badge_new"
-      },
-      {
-        "path": "/panel",
-        "name": "panel",
-        "description": "panel",
-        "icon": "badge_new"
-      },
-      {
         "path": "/drawer",
         "name": "drawer",
         "description": "drawer",
-        "icon": "badge_new"
-      },
-      {
-        "path": "/twImg",
-        "name": "twImg",
-        "description": "twImg",
         "icon": "badge_new"
       }
     ]
