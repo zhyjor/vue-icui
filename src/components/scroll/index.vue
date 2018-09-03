@@ -127,14 +127,16 @@
     },
     computed: {
       pullUpTxt () {
-        const moreTxt = this.pullUpLoad && this.pullUpLoad.txt && this.pullUpLoad.txt.more || this.$i18n.t('scrollComponent.defaultLoadTxtMore')
+        // const moreTxt = this.pullUpLoad && this.pullUpLoad.txt && this.pullUpLoad.txt.more || this.$i18n.t('scrollComponent.defaultLoadTxtMore')
+        //
+        // const noMoreTxt = this.pullUpLoad && this.pullUpLoad.txt && this.pullUpLoad.txt.noMore || this.$i18n.t('scrollComponent.defaultLoadTxtNoMore')
+        return this.pullUpDirty ? '加载更多' : '没有更多数据了'
 
-        const noMoreTxt = this.pullUpLoad && this.pullUpLoad.txt && this.pullUpLoad.txt.noMore || this.$i18n.t('scrollComponent.defaultLoadTxtNoMore')
-
-        return this.pullUpDirty ? moreTxt : noMoreTxt
+        // return this.pullUpDirty ? moreTxt : noMoreTxt
       },
       refreshTxt () {
-        return this.pullDownRefresh && this.pullDownRefresh.txt || this.$i18n.t('scrollComponent.defaultRefreshTxt')
+        return '刷新成功'
+        // return this.pullDownRefresh && this.pullDownRefresh.txt || this.$i18n.t('scrollComponent.defaultRefreshTxt')
       }
     },
     created () {
